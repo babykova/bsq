@@ -6,29 +6,33 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 22:35:43 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/05 23:04:39 by ehayes           ###   ########.fr       */
+/*   Updated: 2018/11/05 23:39:44 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_bsq.h"
 
-char	**ft_array(t_story *a)
+char	**ft_array(char	*str)
 {
 	char **array;
 	char s;
+	int i;
+	int j;
+	int a;
 
+	a = 0;
+	i = 0;
 	s = info.size;
 	array = (char **)malloc(sizeof(char *)*s + 1);
-	while (*a)
+	while (str[a])
 	{
-		while (*a != '\n')
+		j = 0;
+		while (str[a] != '\n')
 		{
-			*array = *a;
+			str[i][j] = str [a]
 			a++;
+			j++;
 		}
-		array++;
-		a->next;
-		next->data;
+		i++;
 	}
-	return (**array);
 }
