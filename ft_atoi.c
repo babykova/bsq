@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bsq.h                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 20:08:52 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/05 20:59:58 by ehayes           ###   ########.fr       */
+/*   Created: 2018/11/05 22:02:29 by ehayes            #+#    #+#             */
+/*   Updated: 2018/11/05 22:04:57 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BSQ_H
-# define FT_BSQ_H
+#include	"ft_bsq.h"
 
-typedef struct s_list
+int		ft_atoi(char *str)
 {
-	int		size;
-	char	empty;
-	char	obs;
-	char	full;
-}			t_list;
-
-t_list		ft_info(char *str);
-
-#endif
+	int nbr;
+	
+	nbr = 0;
+	while (*str >= '0' && *str <= '9')
+	{
+		nbr = nbr * 10 + (*str - '0');
+		str++;
+	}
+	return (nbr);
+}

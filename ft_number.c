@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bsq.h                                           :+:      :+:    :+:   */
+/*   ft_number.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 20:08:52 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/05 20:59:58 by ehayes           ###   ########.fr       */
+/*   Created: 2018/11/05 21:49:26 by ehayes            #+#    #+#             */
+/*   Updated: 2018/11/05 22:02:03 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BSQ_H
-# define FT_BSQ_H
+#include	"ft_bsq"
 
-typedef struct s_list
+int		ft_number(char *str)
 {
-	int		size;
-	char	empty;
-	char	obs;
-	char	full;
-}			t_list;
+	int i;
 
-t_list		ft_info(char *str);
-
-#endif
+	i = 0;
+	while (str[i] => '0' && str[i] <= '9')
+		i++;
+	return (i);
+}

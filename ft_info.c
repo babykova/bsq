@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bsq.h                                           :+:      :+:    :+:   */
+/*   ft_info.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 20:08:52 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/05 20:59:58 by ehayes           ###   ########.fr       */
+/*   Created: 2018/11/05 21:33:20 by ehayes            #+#    #+#             */
+/*   Updated: 2018/11/05 21:49:12 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BSQ_H
-# define FT_BSQ_H
+#include "ft_bsq.h"
 
-typedef struct s_list
+t_list	ft_info(char str)
 {
-	int		size;
-	char	empty;
-	char	obs;
-	char	full;
-}			t_list;
+	t_list	info;
+	int 	i;
 
-t_list		ft_info(char *str);
-
-#endif
+	i = ft_nbr(str);
+	info.size = ft_atoi(str);
+	info.empty = str[i+1];
+	info.obs = str[i + 2];
+	info. full = str[i + 3];
+}
