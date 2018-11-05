@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_number.c                                        :+:      :+:    :+:   */
+/*   ft_mas.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 21:49:26 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/05 22:08:15 by ehayes           ###   ########.fr       */
+/*   Created: 2018/11/05 22:35:43 by ehayes            #+#    #+#             */
+/*   Updated: 2018/11/05 23:04:39 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"ft_bsq.h"
+#include "ft_bsq.h"
 
-int		ft_number(char *str)
+char	**ft_array(t_story *a)
 {
-	int i;
+	char **array;
+	char s;
 
-	i = 0;
-	while (str[i] => '0' && str[i] <= '9')
-		i++;
-	return (i);
+	s = info.size;
+	array = (char **)malloc(sizeof(char *)*s + 1);
+	while (*a)
+	{
+		while (*a != '\n')
+		{
+			*array = *a;
+			a++;
+		}
+		array++;
+		a->next;
+		next->data;
+	}
+	return (**array);
 }
