@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mas.c                                           :+:      :+:    :+:   */
+/*   f.c                                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 22:35:43 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/06 23:13:04 by ehayes           ###   ########.fr       */
+/*   Created: 2018/11/04 18:44:21 by ehayes            #+#    #+#             */
+/*   Updated: 2018/11/04 22:01:45 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_bsq.h"
+#include <unistd.h>
 
-char	**ft_array(char	*str)
+void	ft_putchar(char c)
 {
-	char **array;
-	int s;
-	int i;
-	int j;
-	int a;
-
-	a = 0;
-	i = 0;
-	s = info.size;
-	array = (char **)malloc(sizeof(char *)*s + 1);
-	while (str[a])
-	{
-		j = 0;
-		while (str[a] != '\n')
-		{
-			str[i][j] = str [a]
-			a++;
-			j++;
-		}
-		str[i][j + 1] = '\n';
-		i++;
-	}
-	return (array);
+	write(1, &c, 1);
 }

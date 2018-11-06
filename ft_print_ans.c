@@ -6,7 +6,7 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:20:23 by ehayes            #+#    #+#             */
-/*   Updated: 2018/11/06 14:59:39 by ehayes           ###   ########.fr       */
+/*   Updated: 2018/11/06 23:23:17 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 void	ft_print_ans(char **ans)
 {
-	while (**ans)
+	int i;
+	int j;
+
+	i = 0;
+	while (ans[i])
 	{
-		while (*ans)
+		j = 0;
+		while (ans[i][j])
 		{
-			ft_putchar(*ans);
-			ans++;
+			ft_putchar(ans[i][j]);
+			j++;
 		}
 		write(1, '\n', 1);
-		(*ans)++;
+		i++;
 	}
 }
