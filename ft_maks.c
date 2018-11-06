@@ -15,7 +15,7 @@
 char	**ft_array(char	*str)
 {
 	char **array;
-	char s;
+	int s;
 	int i;
 	int j;
 	int a;
