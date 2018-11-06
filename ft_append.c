@@ -16,17 +16,21 @@ void	ft_append(char ***arr, char *str, int i)
 {
 	int s;
 	int st;
+    int j;
+    int a;
 
-	st = ft_strlen(str);
+    a = 0;
+    j = 0;
+    st = ft_strlen(str);
 	s = info.size;
 	arr = (char **)malloc(sizeof(char *)*(s+1) + 1);
 	arr[i] = (char *)malloc(sizeof(char)*st + 1);
 	arr[i + 1] = NULL;
-    while (src[j] != '\0')
+    while (src[a] != '\0')
     {
-        arr[i] = src[j];
+        arr[i][j] = src[a];
+        a++;
         j++;
-        i++;
     }
-    arr[i] = '\0';
+    arr[i][j] = '\0';
 }
